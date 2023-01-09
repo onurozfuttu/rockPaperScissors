@@ -39,6 +39,13 @@ struct ContentView: View {
             Text("Computer's choice was \(showPC ? randomPick(pickNew: compPick) : "???")")
             VStack{
                 Text("Pick your choice")
+//                ForEach(0..<2){
+//                    button in
+//                    Button(compPick[button]){
+//
+//                    }
+//                }
+                
                 Button("Rock"){
                     playerPick = "Rock"
                     gamePoint += determineWinner(comp: randomPick(pickNew: compPick), human: "Rock")
@@ -70,6 +77,7 @@ struct ContentView: View {
                         gameOver = true
                         gamePoint = 0
                         lastGame = 0
+                        
                     }
                 }
                 
