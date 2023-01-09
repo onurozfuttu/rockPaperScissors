@@ -18,13 +18,6 @@ struct ContentView: View {
     @State private var gameOver: Bool = false
     
     
-//    var randomCompPick: String {
-//        let randomNum = Int.random(in: 0...2)
-//        let retNum = compPick[randomNum]
-//        return retNum
-//
-//    }
-    
     func randomPick(pickNew: [String]) -> String{
         let randomNum = Int.random(in: 0...2)
         let returnNum = pickNew[randomNum]
@@ -39,12 +32,6 @@ struct ContentView: View {
             Text("Computer's choice was \(showPC ? randomPick(pickNew: compPick) : "???")")
             VStack{
                 Text("Pick your choice")
-//                ForEach(0..<2){
-//                    button in
-//                    Button(compPick[button]){
-//
-//                    }
-//                }
                 
                 Button("Rock"){
                     playerPick = "Rock"
